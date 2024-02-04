@@ -18,4 +18,21 @@ samples, guidance on mobile development, and a full API reference.
 
 # Project Notes 
 
-### Navigation
+## Navigation
+view in 1_basics
+
+### Setting Up Routes
+```
+routes: {
+    '/firstpage': (context) => FirstPage(),
+    '/secondpage': (context) => SecondPage(),
+},
+```
+
+### Navigating A Page 
+Push desired page using Navigator
+```
+ onPress: () {
+        Navigator.pushNamed(context, '/secondpage');
+    }
+```
