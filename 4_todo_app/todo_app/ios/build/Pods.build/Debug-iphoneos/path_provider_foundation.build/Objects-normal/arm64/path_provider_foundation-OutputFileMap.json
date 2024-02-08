@@ -1,0 +1,28 @@
+{
+  "" : {
+    "diagnostics" : "/Users/izhar/Documents/Github/Flutter/FlutterClass/FlutterFun/4_todo_app/todo_app/ios/build/Pods.build/Debug-iphoneos/path_provider_foundation.build/Objects-normal/arm64/path_provider_foundation-master.dia",
+    "emit-module-dependencies" : "/Users/izhar/Documents/Github/Flutter/FlutterClass/FlutterFun/4_todo_app/todo_app/ios/build/Pods.build/Debug-iphoneos/path_provider_foundation.build/Objects-normal/arm64/path_provider_foundation-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/izhar/Documents/Github/Flutter/FlutterClass/FlutterFun/4_todo_app/todo_app/ios/build/Pods.build/Debug-iphoneos/path_provider_foundation.build/Objects-normal/arm64/path_provider_foundation-master-emit-module.dia",
+    "swift-dependencies" : "/Users/izhar/Documents/Github/Flutter/FlutterClass/FlutterFun/4_todo_app/todo_app/ios/build/Pods.build/Debug-iphoneos/path_provider_foundation.build/Objects-normal/arm64/path_provider_foundation-master.swiftdeps"
+  },
+  "/Users/izhar/.pub-cache/hosted/pub.dev/path_provider_foundation-2.3.2/darwin/Classes/messages.g.swift" : {
+    "const-values" : "/Users/izhar/Documents/Github/Flutter/FlutterClass/FlutterFun/4_todo_app/todo_app/ios/build/Pods.build/Debug-iphoneos/path_provider_foundation.build/Objects-normal/arm64/messages.g.swiftconstvalues",
+    "dependencies" : "/Users/izhar/Documents/Github/Flutter/FlutterClass/FlutterFun/4_todo_app/todo_app/ios/build/Pods.build/Debug-iphoneos/path_provider_foundation.build/Objects-normal/arm64/messages.g.d",
+    "diagnostics" : "/Users/izhar/Documents/Github/Flutter/FlutterClass/FlutterFun/4_todo_app/todo_app/ios/build/Pods.build/Debug-iphoneos/path_provider_foundation.build/Objects-normal/arm64/messages.g.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/path_provider_foundation.build/Objects-normal/arm64/messages.g.o",
+    "llvm-bc" : "/Users/izhar/Documents/Github/Flutter/FlutterClass/FlutterFun/4_todo_app/todo_app/ios/build/Pods.build/Debug-iphoneos/path_provider_foundation.build/Objects-normal/arm64/messages.g.bc",
+    "object" : "/Users/izhar/Documents/Github/Flutter/FlutterClass/FlutterFun/4_todo_app/todo_app/ios/build/Pods.build/Debug-iphoneos/path_provider_foundation.build/Objects-normal/arm64/messages.g.o",
+    "swift-dependencies" : "/Users/izhar/Documents/Github/Flutter/FlutterClass/FlutterFun/4_todo_app/todo_app/ios/build/Pods.build/Debug-iphoneos/path_provider_foundation.build/Objects-normal/arm64/messages.g.swiftdeps",
+    "swiftmodule" : "/Users/izhar/Documents/Github/Flutter/FlutterClass/FlutterFun/4_todo_app/todo_app/ios/build/Pods.build/Debug-iphoneos/path_provider_foundation.build/Objects-normal/arm64/messages.g~partial.swiftmodule"
+  },
+  "/Users/izhar/.pub-cache/hosted/pub.dev/path_provider_foundation-2.3.2/darwin/Classes/PathProviderPlugin.swift" : {
+    "const-values" : "/Users/izhar/Documents/Github/Flutter/FlutterClass/FlutterFun/4_todo_app/todo_app/ios/build/Pods.build/Debug-iphoneos/path_provider_foundation.build/Objects-normal/arm64/PathProviderPlugin.swiftconstvalues",
+    "dependencies" : "/Users/izhar/Documents/Github/Flutter/FlutterClass/FlutterFun/4_todo_app/todo_app/ios/build/Pods.build/Debug-iphoneos/path_provider_foundation.build/Objects-normal/arm64/PathProviderPlugin.d",
+    "diagnostics" : "/Users/izhar/Documents/Github/Flutter/FlutterClass/FlutterFun/4_todo_app/todo_app/ios/build/Pods.build/Debug-iphoneos/path_provider_foundation.build/Objects-normal/arm64/PathProviderPlugin.dia",
+    "index-unit-output-path" : "/Pods.build/Debug-iphoneos/path_provider_foundation.build/Objects-normal/arm64/PathProviderPlugin.o",
+    "llvm-bc" : "/Users/izhar/Documents/Github/Flutter/FlutterClass/FlutterFun/4_todo_app/todo_app/ios/build/Pods.build/Debug-iphoneos/path_provider_foundation.build/Objects-normal/arm64/PathProviderPlugin.bc",
+    "object" : "/Users/izhar/Documents/Github/Flutter/FlutterClass/FlutterFun/4_todo_app/todo_app/ios/build/Pods.build/Debug-iphoneos/path_provider_foundation.build/Objects-normal/arm64/PathProviderPlugin.o",
+    "swift-dependencies" : "/Users/izhar/Documents/Github/Flutter/FlutterClass/FlutterFun/4_todo_app/todo_app/ios/build/Pods.build/Debug-iphoneos/path_provider_foundation.build/Objects-normal/arm64/PathProviderPlugin.swiftdeps",
+    "swiftmodule" : "/Users/izhar/Documents/Github/Flutter/FlutterClass/FlutterFun/4_todo_app/todo_app/ios/build/Pods.build/Debug-iphoneos/path_provider_foundation.build/Objects-normal/arm64/PathProviderPlugin~partial.swiftmodule"
+  }
+}
