@@ -1,28 +1,24 @@
-# flutter_application_1
-
-A new Flutter project.
+# Flutter FUN!
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+A few resources to get you started:
 
-A few resources to get you started if this is your first Flutter project:
-
+- [online documentation](https://docs.flutter.dev/)
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-# Launch Andriod Emulator Without Opening Andriod Studios
+### TIPS
+Launch Andriod Emulator Without Opening Andriod Studios
 type ``` flutter emulators ```
 find the device you want to open in the list 
 then type ``` flutter emulators --launch <emulator id> ```
+
+
 # Project Notes 
 
 ## Navigation
-view in 1_basics
+View in 1_basics folder
 
 ### Setting Up Routes
 ```
@@ -106,3 +102,53 @@ String userName = myController.text;
     controller: myController,
  )...
 ```
+
+## Theme Setting 
+Flutter 3.16.9
+
+Setting the App Theme :
+```
+theme: ThemeData(
+          colorScheme: ColorScheme.fromSwatch( <-- use colorScheme to set primary colors 
+            primarySwatch: Colors.yellow,
+          ),
+          primaryColor: Colors.yellow,
+          appBarTheme: AppBarTheme(
+            backgroundColor: Colors.yellow,
+          )),
+```
+*notice appBarTheme is included, this had to be set because the primary color does not follow the app bar colors using Flutter 3.16 + 
+
+calling theme variables within the code
+```
+color: Theme.of(context).primaryColor,
+```
+
+## Local Database with Hive
+first add hive to the pubspec.yaml file dependencies (both defualt and dev)
+```
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+```
+
+then initialize hive in the main.dart file and make the main funtion async
+```
+void main() async {
+  // init the hive
+  await Hive.initFlutter();
+
+  // open a box
+  var box = await Hive.openBox('myBox');
+
+  runApp(const MyApp());
+}
+```
+
+When using hive use the reference of the database 
+```
+  // reference hive box
+  final _myBox = Hive.box('myBox'); <-- reference myBox in hive
+  ToDoDataBase db = ToDoDataBase(); <-- check database.dart creating methods for using the db
+```
+
+

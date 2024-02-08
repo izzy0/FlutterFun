@@ -36,7 +36,7 @@ class _FirstPageState extends State<FirstPage> {
         title: Text('First Page'),
       ),
       drawer: Drawer(
-        backgroundColor: Colors.deepPurple[100],
+        // backgroundColor: Colors.deepPurple[100],
         child: Column(
           children: [
             DrawerHeader(
