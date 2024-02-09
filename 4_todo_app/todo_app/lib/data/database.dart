@@ -10,8 +10,8 @@ class ToDoDataBase {
 // run this method if thie is the first time ever opening this app
   void createInitialData() {
     toDoList = [
-      ["Get Milk", false],
-      ["Go to Gym", false],
+      ["Get Milk", false, false],
+      ["Go to Gym", false, false],
     ];
   }
 
@@ -23,5 +23,10 @@ class ToDoDataBase {
 // updata the datebase
   void upateDatabase() {
     _myBox.put("TODOLIST", toDoList);
+  }
+
+// clear local cache 
+  void clearData() {
+    _myBox.delete("TODOLIST");
   }
 }

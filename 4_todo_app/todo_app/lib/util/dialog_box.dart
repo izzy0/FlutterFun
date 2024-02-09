@@ -20,30 +20,33 @@ class DialogBox extends StatelessWidget {
     return AlertDialog(
       backgroundColor: Colors.yellow,
       content: Container(
-        height: 120,
-        child:
-            Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-          TextField(
-            controller: controller,
-            decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              hintText: "Add a new task",
+        height: 150,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            TextField(
+              controller: controller,
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                hintText: "Add a new task",
+              ),
             ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              AddButton(
-                text: "Save",
-                onPressed: onSave,
-              ),
-              AddButton(
-                text: "Cancel",
-                onPressed: onCancel,
-              ),
-            ],
-          )
-        ]),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                AddButton(
+                  text: "Cancel",
+                  onPressed: onCancel,
+                ),
+                AddButton(
+                  text: "Save",
+                  onPressed: onSave,
+                ),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }

@@ -23,7 +23,9 @@ class _HomePageState extends State<HomePage> {
       db.createInitialData();
     } else {
       db.loadData();
+      print(db.toDoList);
     }
+      
 
     super.initState();
   }
@@ -33,19 +35,31 @@ class _HomePageState extends State<HomePage> {
 
   // checkbox tapped
   void checkBoxChanged(bool? value, int index) {
+    List movedTask = db.toDoList.elementAt(index);
+
     setState(() {
       db.toDoList[index][1] = !db.toDoList[index][1];
+
+      if(db.toDoList[index][1] == true){
+        db.toDoList.removeAt(index);
+        db.toDoList.insert(db.toDoList.length, movedTask);
+      }
+
     });
     db.upateDatabase();
   }
 
   // add new task
   void addNewTask() {
-    setState(() {
-      db.toDoList.add([_textController.text, false]);
-      _textController.clear();
-    });
-    db.upateDatabase();
+    if (_textController.text.isNotEmpty) {
+      setState(() {
+        // db.toDoList.insert(0, [_textController.text, false, false]);
+        db.toDoList.add([_textController.text, false, false]);
+        _textController.clear();
+      });
+      db.upateDatabase();
+    }
+
     Navigator.of(context).pop();
   }
 
@@ -71,6 +85,25 @@ class _HomePageState extends State<HomePage> {
     db.upateDatabase();
   }
 
+  // starred task
+  void starredTask(int index){
+    List movedTask = db.toDoList.elementAt(index);
+    print(movedTask);
+    setState(() {
+      db.toDoList[index][2] = !db.toDoList[index][2];
+      
+      if(db.toDoList[index][2] == true && db.toDoList[index][1] == false){
+        db.toDoList.removeAt(index);
+        db.toDoList.insert(0, movedTask);
+      } else if (db.toDoList[index][1] == false) {
+        db.toDoList.removeAt(index);
+        db.toDoList.insert(db.toDoList.length, movedTask);
+      }
+    });
+    db.upateDatabase();
+    print(db.toDoList[index][2]);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -91,6 +124,8 @@ class _HomePageState extends State<HomePage> {
             taskCompleted: db.toDoList[index][1],
             onChanged: (value) => checkBoxChanged(value, index),
             deleteTaskFunction: (context) => deleteTask(index),
+            toggleStared: db.toDoList[index][2],
+            starredTaskFucntion: () => starredTask(index),
           );
         },
       ),

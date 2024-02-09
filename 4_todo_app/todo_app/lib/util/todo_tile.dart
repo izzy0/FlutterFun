@@ -6,6 +6,8 @@ class ToDoTile extends StatelessWidget {
   final bool taskCompleted;
   Function(bool?)? onChanged;
   Function(BuildContext) deleteTaskFunction;
+  final bool toggleStared;
+  VoidCallback starredTaskFucntion;
 
   ToDoTile({
     super.key,
@@ -13,6 +15,8 @@ class ToDoTile extends StatelessWidget {
     required this.taskCompleted,
     required this.onChanged,
     required this.deleteTaskFunction,
+    required this.toggleStared,
+    required this.starredTaskFucntion,
   });
 
   @override
@@ -35,24 +39,42 @@ class ToDoTile extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
           ),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              // CheckBox
-              Checkbox(
-                value: taskCompleted,
-                onChanged: onChanged,
-                activeColor: Colors.black,
-                checkColor: Colors.white,
+              Row(
+                children: [
+                  // CheckBox
+                  Checkbox(
+                    value: taskCompleted,
+                    onChanged: onChanged,
+                    activeColor: Colors.black,
+                    checkColor: Colors.white,
+                  ),
+                  // Task Name
+                  SizedBox(
+                    width: 195,
+                    child: Text(
+                      taskName,
+                      softWrap: true,
+                      style: TextStyle(
+                        decoration: taskCompleted
+                            ? TextDecoration.lineThrough
+                            : TextDecoration.none,
+                      ),
+                    ),
+                  ),
+                ],
               ),
-
-              // Task Name
-              Text(
-                taskName,
-                style: TextStyle(
-                  decoration: taskCompleted
-                      ? TextDecoration.lineThrough
-                      : TextDecoration.none,
-                ),
-              ),
+              IconButton(
+                onPressed: starredTaskFucntion,
+                icon: toggleStared == true
+                    ? Icon(
+                        Icons.star_rounded,
+                        size: 30,
+                        color: Colors.black,
+                      )
+                    : Icon(Icons.star_border_rounded),
+              )
             ],
           ),
         ),
